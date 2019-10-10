@@ -1,0 +1,184 @@
+$color-bg: #32417b;
+$color-white: #ffffff;
+$color-green: #267921;
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: $color-bg;
+    color: $color-white;
+}
+
+.app {
+    &__container {
+        display: flex;
+        max-width: 1100px;
+        margin: 20px auto 0;
+        padding: 0 15px;
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__main {
+        flex: 1;
+    }
+
+    &__title {
+        font-size: 2rem;
+        text-align: left;
+        font-weight: 300;
+        margin: 0 0 2rem;
+
+        @media(max-width: 576px) {
+            text-align: center;
+        }
+    }
+
+    &__form {
+        display: flex;
+
+        @media(max-width: 576px) {
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        flex: 5;
+        border: 1px solid lighten($color-bg, 7%);
+        padding: 1rem;
+        font-size: 1.25rem;
+        font-family: monospace, sans-serif;
+        font-weight: 300;
+        line-height: 1;
+        background: lighten($color-bg, 7%);
+        color: $color-white;
+        border-radius: 5px;
+        transition: 0.2s ease;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 7px rgba(0,0,0,0.2);
+        }
+
+        &::placeholder {
+            color: darken($color-white, 10%);
+        }
+    }
+
+    &__button {
+        flex : 1;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        appearance: none;
+        padding: 0 0.75rem;
+        background: $color-green;
+        border-radius: 5px;
+        margin-left: 1rem;
+        color: $color-white;
+        transition: 0.1s ease;
+
+        &:hover {
+            background: lighten($color-green, 5%);
+            box-shadow: 0 0 7px rgba(0,0,0,0.2);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        @media(max-width: 576px) {
+            margin-left: 0;
+            margin-top: 1rem;
+            padding: 1rem 0;
+        }
+    }
+
+    &__description {
+        background: lighten($color-bg, 7%);
+        padding: 15px 20px;
+        border-radius: 5px;
+        margin-left: 3rem;
+        max-width: 300px;
+        align-self: flex-start;
+
+        @media(max-width: 768px) {
+            margin-left: 0;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        @media(max-width: 576px) {
+            max-width: 100%;
+        }
+    }
+
+    &__paragraph {
+        font-size: 0.9rem;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.5;
+        
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__item {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+}
+
+.result {
+    display: flex;
+    margin-top: 2rem;
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 2;
+
+        &:last-child {
+            flex: 1;
+
+            @media(max-width: 576px) {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+
+        @media(max-width: 576px) {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__value,
+    &__type {
+        font-size: 3rem;
+        font-weight: 300;
+
+        @media(max-width: 576px) {
+            font-size: 2rem;
+        }
+    }
+
+    &__value {
+        padding-right: 1rem;
+        word-break: break-word;
+    }
+
+    @media(max-width: 576px) {
+        flex-direction: column;
+    }
+}

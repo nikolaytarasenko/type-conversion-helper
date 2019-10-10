@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Type Conversion Helper</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="app__container">
+            <div class="app__main">
+                <h1 class="app__title">Type Conversion Helper</h1>
+                <div class="app__form">
+                    <input type="text" class="app__input" placeholder="expression..">
+                    <button type="button" class="app__button">convert</button>
+                </div>
+                <div class="app__result result">
+                    <div class="result__group">
+                        <div class="result__title">Result:</div>
+                        <div class="result__value">...</div>
+                    </div>
+                    <div class="result__group">
+                        <div class="result__title">Type:</div>
+                        <div class="result__type">...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="app__description">
+                <p class="app__paragraph">Простой интерфейс для отображения результатов операций по преобразованию
+                    типов.</p>
+                <p class="app__paragraph">Например:</p>
+                <ul class="app__list">
+                    <li class="app__item">true + false</li>
+                    <li class="app__item">"6px" - 2</li>
+                    <li class="app__item">4 / false</li>
+                    <li class="app__item">3 / 0</li>
+                    <li class="app__item">1 && 2 || null && 3</li>
+                </ul>
+                <p class="app__paragraph">и т.д.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
